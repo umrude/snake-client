@@ -4,7 +4,7 @@ const net = require('net');
  */
 const connect = function() {
   const conn = net.createConnection({
-    host: '192.168.88.254',
+    host: 'localhost',
     port: 50541
   });
   // interpret incoming data as text
@@ -20,8 +20,3 @@ const connect = function() {
 };
 
 module.exports = connect;
-
-// "Move: up" - move up one square(unless facing down)
-// "Move: down" - move down one square(unless facing up)
-// "Move: left" - move left one square(unless facing right)
-// "Move: right" - move left one square(unless facing left)
