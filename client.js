@@ -4,7 +4,7 @@ const net = require('net');
  */
 const connect = function() {
   const conn = net.createConnection({
-    host: 'localhost',
+    host: '192.168.88.254',
     port: 50541
   });
   // interpret incoming data as text
@@ -14,7 +14,7 @@ const connect = function() {
     conn.write("Name: Gab");
   });
   conn.on('data', () => {
-    console.log("you ded cuz you idled");
+    console.log("you ded");
   });
   return conn;
 };
